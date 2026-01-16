@@ -1,65 +1,77 @@
 'use client'
 
-import Link from 'next/link'
 import { Github, ExternalLink } from 'lucide-react'
 import { Work } from '@/lib/works'
+import { getTechIconUrl } from '@/lib/tech-icons'
 
 export function WorksGrid({ works }: { works: Work[] }) {
     return (
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-            <h1 className="mb-4 text-center">Works</h1>
-            <p className="text-center text-neutral-600 mb-12 max-w-2xl mx-auto">
+            <h1 className="mb-4 text-center text-primary font-bold">Works</h1>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
                 これまでに携わったプロジェクトや制作物の一覧です。
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="flex flex-col gap-8">
                 {works.map(work => (
                     <div
                         key={work.id}
-                        className="bg-white border border-neutral-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow flex flex-col"
+                        className="bg-card border rounded-xl overflow-hidden hover:shadow-xl hover:border-primary/50 transition-all p-8"
                     >
-                        <div className="w-full h-48 bg-neutral-200 flex items-center justify-center">
-                            <span className="text-neutral-400">Project Image</span>
-                        </div>
-
-                        <div className="p-6 flex-1 flex flex-col">
-                            <h3 className="mb-2">{work.title}</h3>
-                            <p className="text-neutral-600 mb-4 flex-1">
+                            <h3 className="text-2xl mb-3 text-primary font-bold">{work.title}</h3>
+                            <p className="text-muted-foreground mb-6 text-base leading-relaxed">
                                 {work.description}
                             </p>
 
-                            <div className="flex flex-wrap gap-2 mb-4">
-                                {work.technologies.slice(0, 3).map((tech, index) => (
-                                    <span
-                                        key={index}
-                                        className="px-2 py-1 bg-neutral-100 text-neutral-700 rounded text-sm"
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
-                                {work.technologies.length > 3 && (
-                                    <span className="px-2 py-1 text-neutral-500 text-sm">
-                                        +{work.technologies.length - 3}
-                                    </span>
-                                )}
+                            <div className="mb-6">
+                                <p className="text-sm text-muted-foreground mb-2 font-medium">技術スタック</p>
+                                <div className="flex flex-wrap gap-2">
+                                {work.technologies.map((tech, index) => {
+                                    const iconUrl = getTechIconUrl(tech)
+                                    return (
+                                        <span
+                                            key={index}
+                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/15 text-primary rounded-md text-sm font-medium"
+                                        >
+                                            {iconUrl && (
+                                                <img
+                                                    src={iconUrl}
+                                                    alt={tech}
+                                                    className="w-4 h-4"
+                                                />
+                                            )}
+                                            {tech}
+                                        </span>
+                                    )
+                                })}
+                                </div>
                             </div>
 
-                            <div className="flex items-center gap-3">
-                                <Link
-                                    href={`/works/${work.id}`}
-                                    className="flex-1 px-4 py-2 bg-neutral-900 text-white rounded-lg hover:bg-neutral-700 transition-colors text-center"
-                                >
-                                    詳細を見る
-                                </Link>
+                            {work.roles && work.roles.length > 0 && (
+                                <div className="mb-6">
+                                    <p className="text-sm text-muted-foreground mb-2 font-medium">役割</p>
+                                    <div className="flex flex-wrap gap-2">
+                                        {work.roles.map((role, index) => (
+                                            <span
+                                                key={index}
+                                                className="px-3 py-1.5 border border-primary/30 text-primary rounded-md text-sm font-medium"
+                                            >
+                                                {role}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
 
+                            <div className="flex items-center gap-4">
                                 {work.githubUrl && (
                                     <a
                                         href={work.githubUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="p-2 border border-neutral-300 rounded-lg hover:bg-neutral-50"
+                                        className="p-2.5 border rounded-lg hover:bg-primary/10 hover:border-primary/50 transition-colors"
                                     >
-                                        <Github size={20} />
+                                        <Github size={22} className="text-primary" />
                                     </a>
                                 )}
 
@@ -68,13 +80,12 @@ export function WorksGrid({ works }: { works: Work[] }) {
                                         href={work.demoUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="p-2 border border-neutral-300 rounded-lg hover:bg-neutral-50"
+                                        className="p-2.5 border rounded-lg hover:bg-primary/10 hover:border-primary/50 transition-colors"
                                     >
-                                        <ExternalLink size={20} />
+                                        <ExternalLink size={22} className="text-primary" />
                                     </a>
                                 )}
                             </div>
-                        </div>
                     </div>
                 ))}
             </div>

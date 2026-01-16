@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# works images (prevent misuse)
+/public/my-icon.png
+
+# tech icons data
+/lib/tech-icons.ts
