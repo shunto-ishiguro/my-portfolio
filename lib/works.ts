@@ -3,6 +3,7 @@ export interface Work {
     title: string
     description: string
     technologies: string[]
+    roles?: string[]
     githubUrl?: string
     demoUrl?: string
 }
@@ -10,52 +11,47 @@ export interface Work {
 export const worksData: Work[] = [
     {
         id: 'work-1',
-        title: 'はこんだてプロジェクト',
+        title: '美唄ハッカソン2025',
         description:
-            '高度ICT演習での学習支援システム。設計補助とデザインを担当し、UI/UXの改善に貢献。',
-        technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase'],
-        githubUrl: '#',
-        demoUrl: '#',
+            '美唄市をテーマにしたハッカソンでの成果物。フロントエンドの実装を担当。',
+        technologies: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+        roles: ["フロントエンド実装"],
+        demoUrl: 'https://bibai-hackathon-team-magan.vercel.app/',
     },
     {
         id: 'work-2',
-        title: '美唄ハッカソン プロジェクト',
+        title: 'JPHACKS2025',
         description:
-            '地域課題解決をテーマにしたハッカソンでの成果物。デザインとフロントエンド実装を担当。',
-        technologies: ['Next.js', 'TypeScript', 'shadcn/ui', 'Framer Motion'],
-        githubUrl: '#',
+            '現在地を取得して、そこから条件に合うお店を取得してランダムで決めてくれるアプリケーションを開発。フロントエンドの実装を担当。',
+        technologies: ['TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'shadcn/ui', 'Supabase', 'Vercel'],
+        roles: ["フロントエンド実装", "技術選定"],
+        githubUrl: 'https://github.com/jphacks/sp_2504',
+        demoUrl: 'https://sp-2504.vercel.app/',
     },
     {
         id: 'work-3',
-        title: 'JPHACKS2025 プロジェクト',
+        title: 'TAMABLE 長期インターン: 勤怠・日報システム',
         description:
-            '全国規模のハッカソンでの開発プロジェクト。デザインシステム構築とフロントエンド開発を主導。',
-        technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Zustand'],
-        githubUrl: '#',
-        demoUrl: '#',
+            '社内で専用の勤怠・日報システムの開発。フロントエンドの実装からバックエンドの実装まで担当。',
+        technologies: ['TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion', 'zod', 'OpenAPI', 'Hono', 'Supabase', 'PostgreSQL', 'Supabase Auth', 'GitHub Actions', 'pnpm', 'ESlint', 'Vercel', 'Cloudflare Workers'],
+        roles: ['フロントエンド実装', 'バックエンド実装', 'データベース管理', 'データベース設計', 'API設計', '認証基盤設計', '技術選定', 'コードレビュー'],
+        githubUrl: 'https://github.com/TAM-ABLE/attendance-manager',
     },
     {
         id: 'work-4',
-        title: 'TAMABLE インターン開発',
+        title: 'P2HACKS2025',
         description:
-            '長期インターンでのフルスタック開発。認証機能、API設計、フロントエンド実装を担当。',
-        technologies: ['Next.js', 'Go', 'PostgreSQL', 'Docker'],
+            'イラストをレビューしてほしい人を結び付けるマッチングアプリ開発。バックエンドとインフラを担当し、API、テストや並行処理を実装。',
+        technologies: ['Flutter', 'Go', 'Gin', 'Supabase', 'PostgreSQL', 'GitHub Actions', 'Render'],
+        roles: ['バックエンド実装', 'データベース管理', 'データベース設計', 'API設計', 'APIテスト実装', '技術選定'],
+        githubUrl: 'https://github.com/p2hacks2025/pre-12',
     },
     {
         id: 'work-5',
-        title: 'P2HACKS2025 プロジェクト',
-        description:
-            'バックエンドとインフラに重点を置いた開発。Docker環境構築、API実装、デプロイフローを担当。',
-        technologies: ['Go', 'Gin', 'PostgreSQL', 'Docker', 'Render'],
-        githubUrl: '#',
-    },
-    {
-        id: 'work-6',
         title: '個人プロジェクト: ポートフォリオサイト',
         description:
-            'このポートフォリオサイト自体も技術力の証明の一つ。レスポンシブデザインとアクセシビリティを重視。',
-        technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-        githubUrl: '#',
-        demoUrl: '#',
+            'このポートフォリオサイトについて。レスポンシブデザインとアクセシビリティを重視。',
+        technologies: ['TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'shadcn/ui', 'Vercel'],
+        githubUrl: 'https://github.com/shunto-ishiguro/my-portfolio'
     },
 ]

@@ -18,31 +18,31 @@ export default function ExperiencePage() {
         {
             date: '2024年4月 - 2025年3月',
             title: '高度ICT演習はこんだてプロジェクト',
-            description: '学習・設計補助・デザインを担当',
+            description: '実際にリリースしているアプリケーション「はこんだて」を通して、開発としてメンバーとして参加',
             type: 'project',
         },
         {
             date: '2025年3月',
             title: '美唄ハッカソン',
-            description: 'デザイン・フロントエンド開発を担当',
+            description: 'フロントエンド開発を担当',
             type: 'hackathon',
         },
         {
             date: '2024年10月',
             title: '競技プログラミング開始',
-            description: 'AtCoderでアルゴリズム・データ構造の学習（茶コーダー）',
+            description: 'AtCoderでアルゴリズム・データ構造の学習',
             type: 'education',
         },
         {
             date: '2025年10月',
             title: 'JPHACKS2025',
-            description: 'デザイン・フロントエンド開発を担当',
+            description: 'フロントエンド開発を担当',
             type: 'hackathon',
         },
         {
             date: '2025年11月 - 現在',
             title: '株式会社TAMABLE 長期インターン',
-            description: 'フルスタックエンジニアとして開発に従事',
+            description: 'エンジニアとして社内ツールやECサイトの開発に携わる',
             type: 'internship',
         },
         {
@@ -85,36 +85,36 @@ export default function ExperiencePage() {
 
     return (
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-            <h1 className="mb-12 text-center">Experience</h1>
+            <h1 className="mb-12 text-center text-primary font-bold">Experience</h1>
 
             <div className="relative">
                 {/* Timeline Line */}
-                <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-neutral-200 -ml-px hidden sm:block" />
+                <div className="absolute left-[18px] sm:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-primary/40 sm:-ml-px" />
 
-                <div className="space-y-12">
+                <div className="space-y-6 sm:space-y-12">
                     {timeline.map((item, index) => (
                         <div
                             key={index}
-                            className={`relative flex flex-col sm:flex-row gap-4 sm:gap-8 ${index % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'
+                            className={`relative flex flex-row sm:gap-8 ${index % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'
                                 }`}
                         >
+                            {/* Timeline Dot */}
+                            <div className="absolute left-3 sm:left-1/2 top-5 sm:top-6 w-3 h-3 rounded-full sm:-ml-1.5 bg-primary ring-4 ring-background" />
+
                             {/* Content */}
-                            <div className={`flex-1 ${index % 2 === 0 ? 'sm:text-right' : 'sm:text-left'}`}>
-                                <div className="bg-white border border-neutral-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-                                    <div className="flex items-center gap-2 mb-2 sm:justify-end">
-                                        <Calendar size={16} className="text-neutral-500" />
-                                        <span className="text-neutral-600">{item.date}</span>
+                            <div className={`flex-1 pl-10 sm:pl-0 ${index % 2 === 0 ? 'sm:text-right' : 'sm:text-left'}`}>
+                                <div className="bg-card border rounded-xl p-4 sm:p-6 shadow-sm hover:shadow-md hover:border-primary/50 transition-all duration-200">
+                                    <div className={`flex items-center gap-2 mb-2 ${index % 2 === 0 ? 'sm:justify-end' : 'sm:justify-start'}`}>
+                                        <Calendar size={14} className="text-primary" />
+                                        <span className="text-muted-foreground text-xs sm:text-sm font-medium">{item.date}</span>
                                     </div>
-                                    <h3 className="mb-2">{item.title}</h3>
-                                    <p className="text-neutral-600 mb-3">{item.description}</p>
-                                    <span className={`inline-block px-3 py-1 rounded-full border text-sm ${getTypeStyle(item.type)}`}>
+                                    <h3 className="mb-1.5 text-base sm:text-lg font-semibold text-foreground">{item.title}</h3>
+                                    <p className="text-muted-foreground mb-3 text-sm leading-relaxed">{item.description}</p>
+                                    <span className={`inline-block px-2.5 py-0.5 rounded-full border text-xs font-medium ${getTypeStyle(item.type)}`}>
                                         {getTypeLabel(item.type)}
                                     </span>
                                 </div>
                             </div>
-
-                            {/* Timeline Dot */}
-                            <div className="absolute left-4 sm:left-1/2 top-6 w-3 h-3 bg-neutral-900 rounded-full -ml-1.5 hidden sm:block" />
 
                             {/* Spacer for alternating layout */}
                             <div className="flex-1 hidden sm:block" />
