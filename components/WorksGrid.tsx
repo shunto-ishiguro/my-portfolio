@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { Github, ExternalLink } from 'lucide-react'
 import { Work } from '@/lib/works'
 import { getTechIconUrl } from '@/lib/tech-icons'
@@ -34,10 +35,13 @@ export function WorksGrid({ works }: { works: Work[] }) {
                                             className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/15 text-primary rounded-md text-sm font-medium"
                                         >
                                             {iconUrl && (
-                                                <img
+                                                <Image
                                                     src={iconUrl}
                                                     alt={tech}
+                                                    width={16}
+                                                    height={16}
                                                     className="w-4 h-4"
+                                                    unoptimized
                                                 />
                                             )}
                                             {tech}
