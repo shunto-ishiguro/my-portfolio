@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Github, Zap, Gauge, Blocks, Palette, Shield, LucideIcon } from 'lucide-react'
 
 export default function TopSectionPage() {
@@ -22,10 +23,13 @@ export default function TopSectionPage() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
       {/* Profile */}
       <div className="flex flex-col items-center gap-8 mb-16">
-        <img
+        <Image
           src="/my-icon.png"
           alt="石黒 隼大"
+          width={160}
+          height={160}
           className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover"
+          priority
         />
 
         <div className="text-center">
@@ -80,10 +84,14 @@ export default function TopSectionPage() {
           href="https://github.com/shunto-ishiguro"
         />
         <ExternalCard
-          icon={<img
+          icon={<Image
             src="https://img.atcoder.jp/assets/top/img/logo_bk.svg"
             alt="AtCoder"
-            className="h-12 w-auto" />}
+            width={100}
+            height={48}
+            className="h-12 w-auto"
+            unoptimized
+          />}
           title="AtCoder"
           desc="アルゴリズム力・論理的思考力を育てるため競技プログラミングを続けております"
           href="https://atcoder.jp/users/Shunto09"

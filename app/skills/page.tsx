@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTechIconUrl } from "@/lib/tech-icons";
 
 interface SkillCategory {
@@ -69,12 +70,14 @@ export default function SkillsPage() {
                                     >
                                         <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
                                             {iconUrl && (
-                                                <img
+                                                <Image
                                                     src={iconUrl}
                                                     alt={skill}
                                                     title={skill}
+                                                    width={24}
+                                                    height={24}
                                                     className="w-6 h-6 object-contain"
-                                                    loading="lazy"
+                                                    unoptimized
                                                 />
                                             )}
                                         </div>

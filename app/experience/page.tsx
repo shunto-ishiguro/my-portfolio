@@ -18,7 +18,7 @@ export default function ExperiencePage() {
         {
             date: '2024年4月 - 2025年3月',
             title: '高度ICT演習はこんだてプロジェクト',
-            description: '実際にリリースしているアプリケーション「はこんだて」を通して、開発としてメンバーとして参加',
+            description: '実際にリリースしているアプリケーション「はこんだて」のメンバーとしてプロジェクトに携わった',
             type: 'project',
         },
         {
