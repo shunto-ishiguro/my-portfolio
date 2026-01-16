@@ -43,8 +43,3 @@ next-env.d.ts
 # works images (prevent misuse)
 /public/my-icon.png
 
-# tech icons data
-/lib/tech-icons.ts
-
-# works data
-/lib/works.ts
