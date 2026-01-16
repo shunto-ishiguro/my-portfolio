@@ -45,3 +45,6 @@ next-env.d.ts
 
 # tech icons data
 /lib/tech-icons.ts
+
+# works data
+/lib/works.ts

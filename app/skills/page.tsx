@@ -14,7 +14,7 @@ export default function SkillsPage() {
         },
         {
             category: "Frontend",
-            skills: ["React", "Next.js", "Tailwind CSS", "shadcn/ui", "Zustand", "Framer Motion", "Three.js", "React Three Fiber"],
+            skills: ["React", "Next.js", "Tailwind CSS", "shadcn/ui", "Zustand", "Framer Motion", "Three.js"],
         },
         {
             category: "Backend",
