@@ -1,3 +1,3 @@
 # My Portfolio
 
-shunto-ihiguroのポートフォリオサイトです
+shunto-ishiguroのポートフォリオサイトです

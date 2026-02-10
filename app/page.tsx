@@ -1,31 +1,60 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import { Github, Zap, Gauge, Blocks, Palette, Shield, Box, Brain, Network, Cloud, LucideIcon } from 'lucide-react'
+import {
+  Blocks,
+  Gauge,
+  Github,
+  type LucideIcon,
+  Network,
+  Palette,
+  Shield,
+  Zap,
+} from "lucide-react";
+import Image from "next/image";
 
 export default function TopSectionPage() {
-  const today = new Date()
-  const birthDate = new Date(2005, 4, 1) // 2005年5月生まれ（月は0始まり）
-  let age = today.getFullYear() - birthDate.getFullYear()
-  const monthDiff = today.getMonth() - birthDate.getMonth()
-  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-    age--
+  const today = new Date();
+  const birthDate = new Date(2005, 4, 1); // 2005年5月生まれ（月は0始まり）
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+  if (
+    monthDiff < 0 ||
+    (monthDiff === 0 && today.getDate() < birthDate.getDate())
+  ) {
+    age--;
   }
 
-  const strengths: { icon: LucideIcon; title: string; description: string }[] = [
-    { icon: Zap, title: '開発スピード', description: '要件を素早く理解し、効率的に実装する能力' },
-    { icon: Gauge, title: 'パフォーマンス志向', description: 'ユーザー体験を考慮した最適化を重視' },
-    { icon: Blocks, title: '保守性・拡張性', description: 'コードの可読性と将来の変更を見据えた設計' },
-    { icon: Palette, title: 'デザイン', description: 'UI/UXを考慮した実装とデザインシステムの理解' },
-    { icon: Shield, title: 'セキュアな設計', description: '認証・認可を含むセキュリティを意識した開発' },
-    { icon: Network, title: 'ネットワークの知識', description: 'TCP/IPやDNSなどネットワーク基盤への理解' },
-  ]
-
-  const interests: { icon: LucideIcon; title: string }[] = [
-    { icon: Shield, title: 'サイバーセキュリティ' },
-    { icon: Gauge, title: 'パフォーマンスチューニング' },
-    { icon: Box, title: '3D技術' },
-    { icon: Brain, title: 'AI技術' },
-  ]
+  const strengths: { icon: LucideIcon; title: string; description: string }[] =
+    [
+      {
+        icon: Zap,
+        title: "開発スピード",
+        description: "要件を素早く理解し、効率的に実装する能力",
+      },
+      {
+        icon: Gauge,
+        title: "パフォーマンス志向",
+        description: "ユーザー体験を考慮した最適化を重視",
+      },
+      {
+        icon: Blocks,
+        title: "保守性・拡張性",
+        description: "コードの可読性と将来の変更を見据えた設計",
+      },
+      {
+        icon: Palette,
+        title: "デザイン",
+        description: "UI/UXを考慮した実装とデザインシステムの理解",
+      },
+      {
+        icon: Shield,
+        title: "セキュアな設計",
+        description: "認証・認可を含むセキュリティを意識した開発",
+      },
+      {
+        icon: Network,
+        title: "ネットワークの知識",
+        description: "TCP/IPやDNSなどネットワーク基盤への理解",
+      },
+    ];
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
@@ -48,10 +77,18 @@ export default function TopSectionPage() {
             <p>システム情報科学部 情報アーキテクチャ学科</p>
           </div>
           <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-2">
-            <span className="px-3 py-1 bg-primary/15 text-primary text-sm rounded-full text-center font-medium">Web開発</span>
-            <span className="px-3 py-1 bg-primary/15 text-primary text-sm rounded-full text-center font-medium">モバイル開発</span>
-            <span className="px-3 py-1 bg-primary/15 text-primary text-sm rounded-full text-center font-medium">フロントエンド開発</span>
-            <span className="px-3 py-1 bg-primary/15 text-primary text-sm rounded-full text-center font-medium">バックエンド開発</span>
+            <span className="px-3 py-1 bg-primary/15 text-primary text-sm rounded-full text-center font-medium">
+              Web開発
+            </span>
+            <span className="px-3 py-1 bg-primary/15 text-primary text-sm rounded-full text-center font-medium">
+              モバイル開発
+            </span>
+            <span className="px-3 py-1 bg-primary/15 text-primary text-sm rounded-full text-center font-medium">
+              フロントエンド開発
+            </span>
+            <span className="px-3 py-1 bg-primary/15 text-primary text-sm rounded-full text-center font-medium">
+              バックエンド開発
+            </span>
           </div>
         </div>
       </div>
@@ -68,17 +105,25 @@ export default function TopSectionPage() {
       <section className="mb-16 text-center">
         <h2 className="mb-8 text-primary font-bold">強み</h2>
         <ul className="space-y-4 sm:space-y-3 inline-block text-left">
-          {strengths.map((s, i) => {
-            const Icon = s.icon
+          {strengths.map((s) => {
+            const Icon = s.icon;
             return (
-              <li key={i} className="flex items-start sm:items-center gap-3">
-                <Icon size={18} className="text-primary shrink-0 mt-0.5 sm:mt-0" />
+              <li
+                key={s.title}
+                className="flex items-start sm:items-center gap-3"
+              >
+                <Icon
+                  size={18}
+                  className="text-primary shrink-0 mt-0.5 sm:mt-0"
+                />
                 <span className="flex flex-col sm:flex-row sm:items-center">
                   <span className="font-medium">{s.title}</span>
-                  <span className="text-muted-foreground text-sm sm:text-base sm:ml-2 sm:before:content-['—_']">{s.description}</span>
+                  <span className="text-muted-foreground text-sm sm:text-base sm:ml-2 sm:before:content-['—_']">
+                    {s.description}
+                  </span>
                 </span>
               </li>
-            )
+            );
           })}
         </ul>
       </section>
@@ -92,21 +137,23 @@ export default function TopSectionPage() {
           href="https://github.com/shunto-ishiguro"
         />
         <ExternalCard
-          icon={<Image
-            src="https://img.atcoder.jp/assets/top/img/logo_bk.svg"
-            alt="AtCoder"
-            width={100}
-            height={48}
-            className="h-12 w-auto"
-            unoptimized
-          />}
+          icon={
+            <Image
+              src="https://img.atcoder.jp/assets/top/img/logo_bk.svg"
+              alt="AtCoder"
+              width={100}
+              height={48}
+              className="h-12 w-auto"
+              unoptimized
+            />
+          }
           title="AtCoder"
           desc="アルゴリズム力・論理的思考力を育てるため競技プログラミングを続けております。（現在は茶コーダー）"
           href="https://atcoder.jp/users/Shunto09"
         />
       </section>
     </div>
-  )
+  );
 }
 
 function ExternalCard({
@@ -115,10 +162,10 @@ function ExternalCard({
   desc,
   href,
 }: {
-  icon: React.ReactNode
-  title: string
-  desc: string
-  href: string
+  icon: React.ReactNode;
+  title: string;
+  desc: string;
+  href: string;
 }) {
   return (
     <div className="bg-card border rounded-lg p-6 flex gap-4">
@@ -131,5 +178,5 @@ function ExternalCard({
         </a>
       </div>
     </div>
-  )
+  );
 }

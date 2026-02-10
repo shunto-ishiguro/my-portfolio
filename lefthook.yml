@@ -1,0 +1,10 @@
+pre-commit:
+  commands:
+    lint:
+      glob: "*.{js,ts,jsx,tsx,json,css}"
+      run: pnpm biome check --staged --no-errors-on-unmatched {staged_files}
+
+pre-push:
+  commands:
+    typecheck:
+      run: pnpm run typecheck
