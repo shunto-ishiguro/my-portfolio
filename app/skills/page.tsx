@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { getTechIconUrl } from "@/lib/tech-icons";
+
+export const metadata: Metadata = {
+  title: "Skills",
+  description: "石黒 隼大の技術スキル一覧です。",
+};
 
 interface SkillCategory {
   category: string;
@@ -60,9 +66,9 @@ export default function SkillsPage() {
             key={category.category}
             className="bg-card border rounded-lg p-6 hover:shadow-lg hover:border-primary/50 transition-all"
           >
-            <h3 className="mb-4 pb-3 border-b border-primary/30 font-semibold text-primary">
+            <h2 className="mb-4 pb-3 border-b border-primary/30 font-semibold text-primary">
               {category.category}
-            </h3>
+            </h2>
 
             <div className="space-y-3">
               {category.skills.map((skill) => {

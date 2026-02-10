@@ -1,4 +1,10 @@
 import { Calendar } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Experience",
+  description: "石黒 隼大の経歴・活動実績です。",
+};
 
 interface TimelineItem {
   date: string;
@@ -116,9 +122,9 @@ export default function ExperiencePage() {
                       {item.date}
                     </span>
                   </div>
-                  <h3 className="mb-1.5 text-base sm:text-lg font-semibold text-foreground">
+                  <h2 className="mb-1.5 text-base sm:text-lg font-semibold text-foreground">
                     {item.title}
-                  </h3>
+                  </h2>
                   <p className="text-muted-foreground mb-3 text-sm leading-relaxed">
                     {item.description}
                   </p>
