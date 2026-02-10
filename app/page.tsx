@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Github, Zap, Gauge, Blocks, Palette, Shield, LucideIcon } from 'lucide-react'
+import { Github, Zap, Gauge, Blocks, Palette, Shield, Box, Brain, Network, Cloud, LucideIcon } from 'lucide-react'
 
 export default function TopSectionPage() {
   const today = new Date()
@@ -17,6 +17,14 @@ export default function TopSectionPage() {
     { icon: Blocks, title: '保守性・拡張性', description: 'コードの可読性と将来の変更を見据えた設計' },
     { icon: Palette, title: 'デザイン', description: 'UI/UXを考慮した実装とデザインシステムの理解' },
     { icon: Shield, title: 'セキュアな設計', description: '認証・認可を含むセキュリティを意識した開発' },
+    { icon: Network, title: 'ネットワークの知識', description: 'TCP/IPやDNSなどネットワーク基盤への理解' },
+  ]
+
+  const interests: { icon: LucideIcon; title: string }[] = [
+    { icon: Shield, title: 'サイバーセキュリティ' },
+    { icon: Gauge, title: 'パフォーマンスチューニング' },
+    { icon: Box, title: '3D技術' },
+    { icon: Brain, title: 'AI技術' },
   ]
 
   return (
@@ -41,12 +49,20 @@ export default function TopSectionPage() {
           </div>
           <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-2">
             <span className="px-3 py-1 bg-primary/15 text-primary text-sm rounded-full text-center font-medium">Web開発</span>
-            <span className="px-3 py-1 bg-primary/15 text-primary text-sm rounded-full text-center font-medium">モバイルアプリ開発</span>
-            <span className="px-3 py-1 bg-primary/15 text-primary text-sm rounded-full text-center font-medium">フロントエンド</span>
-            <span className="px-3 py-1 bg-primary/15 text-primary text-sm rounded-full text-center font-medium">バックエンド</span>
+            <span className="px-3 py-1 bg-primary/15 text-primary text-sm rounded-full text-center font-medium">モバイル開発</span>
+            <span className="px-3 py-1 bg-primary/15 text-primary text-sm rounded-full text-center font-medium">フロントエンド開発</span>
+            <span className="px-3 py-1 bg-primary/15 text-primary text-sm rounded-full text-center font-medium">バックエンド開発</span>
           </div>
         </div>
       </div>
+
+      {/* About */}
+      <section className="mb-16 max-w-2xl mx-auto text-center">
+        <h2 className="mb-6 text-primary font-bold">About</h2>
+        <p className="text-muted-foreground text-base sm:text-lg leading-loose tracking-wide text-balance">
+          2005年生まれ、北海道出身の大学生です。コンピュータサイエンスの基礎を大切にしながら、サイバーセキュリティ、パフォーマンスチューニング、クラウド技術やアルゴリズムといった領域に強い関心を持ち日々学んでいます。技術の深い理解と幅広い実践力を兼ね備え、あらゆる課題を本質から解決できるフルスタックエンジニアを目指しています。
+        </p>
+      </section>
 
       {/* Strengths */}
       <section className="mb-16 text-center">
@@ -67,14 +83,6 @@ export default function TopSectionPage() {
         </ul>
       </section>
 
-      {/* Navigation */}
-      <section className="mb-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <NavCard href="/experience" title="Experience" desc="経歴・プロジェクト履歴" />
-        <NavCard href="/skills" title="Skills" desc="技術スタック一覧" />
-        <NavCard href="/works" title="Works" desc="制作物・実績" />
-        <NavCard href="/contact" title="Contact" desc="お問い合わせ" />
-      </section>
-
       {/* External Links */}
       <section className="border-t pt-8 grid md:grid-cols-2 gap-6">
         <ExternalCard
@@ -93,23 +101,11 @@ export default function TopSectionPage() {
             unoptimized
           />}
           title="AtCoder"
-          desc="アルゴリズム力・論理的思考力を育てるため競技プログラミングを続けております"
+          desc="アルゴリズム力・論理的思考力を育てるため競技プログラミングを続けております。（現在は茶コーダー）"
           href="https://atcoder.jp/users/Shunto09"
         />
       </section>
     </div>
-  )
-}
-
-function NavCard({ href, title, desc }: { href: string; title: string; desc: string }) {
-  return (
-    <Link
-      href={href}
-      className="p-6 bg-card border rounded-lg hover:shadow-lg hover:border-primary/50 transition-all block"
-    >
-      <h3 className="mb-2 text-primary font-bold">{title}</h3>
-      <p className="text-muted-foreground">{desc}</p>
-    </Link>
   )
 }
 

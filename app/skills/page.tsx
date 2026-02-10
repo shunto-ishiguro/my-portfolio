@@ -14,31 +14,19 @@ export default function SkillsPage() {
         },
         {
             category: "Frontend",
-            skills: ["React", "Next.js", "Tailwind CSS", "shadcn/ui", "Zustand", "Framer Motion", "Three.js"],
+            skills: ["React", "Next.js", "Tailwind CSS", "shadcn/ui", "Zustand", "Framer Motion", "Three.js", "React Native"],
         },
         {
             category: "Backend",
-            skills: ["Node.js", "Express", "Hono", "tRPC", "Gin"],
+            skills: ["Node.js", "Express", "Hono", "tRPC", "Gin", "zod", "OpenAPI"],
         },
         {
-            category: "Validation / Schema",
-            skills: ["zod", "OpenAPI"],
-        },
-        {
-            category: "Database / BaaS",
-            skills: ["PostgreSQL", "Supabase"],
-        },
-        {
-            category: "Auth / Security",
-            skills: ["Supabase Auth", "NextAuth"],
-        },
-        {
-            category: "Mobile",
-            skills: ["React Native"],
+            category: "Database / Auth",
+            skills: ["PostgreSQL", "Supabase", "Supabase Auth", "NextAuth"],
         },
         {
             category: "Infra / Deployment",
-            skills: ["Docker", "Vercel", "Render", "Cloudflare Workers"],
+            skills: ["Docker", "Kubernetes", "Vercel", "Render", "Cloudflare Workers", "AWS"],
         },
         {
             category: "Tooling",
