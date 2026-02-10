@@ -8,7 +8,14 @@ import {
   Shield,
   Zap,
 } from "lucide-react";
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "石黒 隼大 | ポートフォリオ",
+  description:
+    "石黒 隼大のポートフォリオサイトです。Web開発・モバイル開発を中心としたスキルや制作物を紹介しています。",
+};
 
 export default function TopSectionPage() {
   const today = new Date();
@@ -61,7 +68,7 @@ export default function TopSectionPage() {
       {/* Profile */}
       <div className="flex flex-col items-center gap-8 mb-16">
         <Image
-          src="/my-icon.png"
+          src="/my-icon.webp"
           alt="石黒 隼大"
           width={160}
           height={160}
@@ -171,7 +178,7 @@ function ExternalCard({
     <div className="bg-card border rounded-lg p-6 flex gap-4">
       <div className="text-primary">{icon}</div>
       <div>
-        <h3 className="text-primary font-bold">{title}</h3>
+        <h2 className="text-primary font-bold">{title}</h2>
         <p className="text-muted-foreground mb-2">{desc}</p>
         <a href={href} className="text-primary hover:underline">
           {href} →

@@ -19,7 +19,10 @@ export function Header() {
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-primary border-b border-primary">
-      <nav className="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
+      <nav
+        aria-label="メインナビゲーション"
+        className="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center"
+      >
         <Link href="/" className="font-medium text-primary-foreground">
           Shunto Ishiguro
         </Link>
@@ -44,6 +47,8 @@ export function Header() {
           type="button"
           className="md:hidden text-primary-foreground"
           onClick={() => setOpen(!open)}
+          aria-label={open ? "メニューを閉じる" : "メニューを開く"}
+          aria-expanded={open}
         >
           {open ? <X /> : <Menu />}
         </button>

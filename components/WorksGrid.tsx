@@ -19,9 +19,9 @@ export function WorksGrid({ works }: { works: Work[] }) {
             key={work.id}
             className="bg-card border rounded-xl overflow-hidden hover:shadow-xl hover:border-primary/50 transition-all p-8"
           >
-            <h3 className="text-2xl mb-3 text-primary font-bold">
+            <h2 className="text-2xl mb-3 text-primary font-bold">
               {work.title}
-            </h3>
+            </h2>
             <p className="text-muted-foreground mb-6 text-base leading-relaxed">
               {work.description}
             </p>
@@ -79,6 +79,7 @@ export function WorksGrid({ works }: { works: Work[] }) {
                   href={work.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`${work.title}のGitHubリポジトリ`}
                   className="p-2.5 border rounded-lg hover:bg-primary/10 hover:border-primary/50 transition-colors"
                 >
                   <Github size={22} className="text-primary" />
@@ -90,6 +91,7 @@ export function WorksGrid({ works }: { works: Work[] }) {
                   href={work.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`${work.title}のデモサイト`}
                   className="p-2.5 border rounded-lg hover:bg-primary/10 hover:border-primary/50 transition-colors"
                 >
                   <ExternalLink size={22} className="text-primary" />

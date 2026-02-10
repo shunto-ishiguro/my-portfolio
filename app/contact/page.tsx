@@ -1,4 +1,10 @@
 import { Mail } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "石黒 隼大へのお問い合わせページです。",
+};
 
 export default function ContactPage() {
   return (
@@ -9,7 +15,7 @@ export default function ContactPage() {
         {/* Email */}
         <div className="bg-card border rounded-lg p-8 text-center hover:shadow-lg hover:border-primary/50 transition-all max-w-md w-full">
           <Mail size={48} className="mx-auto mb-4 text-primary" />
-          <h3 className="mb-2 text-primary">Email</h3>
+          <h2 className="mb-2 text-primary">Email</h2>
           <a
             href="mailto:shunto.ishiguro.job@gmail.com"
             className="text-primary hover:underline break-all transition-colors"
