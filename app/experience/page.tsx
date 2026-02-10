@@ -29,8 +29,8 @@ export default function ExperiencePage() {
         },
         {
             date: '2024年10月',
-            title: '競技プログラミング開始',
-            description: 'AtCoderでアルゴリズム・データ構造の学習',
+            title: '競技プログラミング',
+            description: 'AtCoderでアルゴリズム・データ構造の学習を始める',
             type: 'education',
         },
         {

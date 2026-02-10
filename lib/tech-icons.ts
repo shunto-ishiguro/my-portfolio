@@ -31,6 +31,8 @@ export const techIconMap: Record<string, string> = {
     'ESLint': 'https://cdn.simpleicons.org/eslint',
     'Biome': 'https://cdn.simpleicons.org/biome',
     'Docker': 'https://cdn.simpleicons.org/docker',
+    'Kubernetes': 'https://cdn.simpleicons.org/kubernetes',
+    'AWS': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazonwebservices.svg',
     'Flutter': 'https://cdn.simpleicons.org/flutter',
     'Figma': 'https://cdn.simpleicons.org/figma',
     'HTML': 'https://cdn.simpleicons.org/html5',
