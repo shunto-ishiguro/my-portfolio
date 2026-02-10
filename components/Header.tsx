@@ -4,18 +4,11 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { navItems } from "@/lib/navigation";
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-
-  const navItems = [
-    { href: "/", label: "Top" },
-    { href: "/experience", label: "Experience" },
-    { href: "/skills", label: "Skills" },
-    { href: "/works", label: "Works" },
-    { href: "/contact", label: "Contact" },
-  ];
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-primary border-b border-primary">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { skillCategories } from "@/lib/skills";
 import { getTechIconUrl } from "@/lib/tech-icons";
 
 export const metadata: Metadata = {
@@ -7,55 +8,7 @@ export const metadata: Metadata = {
   description: "石黒 隼大の技術スキル一覧です。",
 };
 
-interface SkillCategory {
-  category: string;
-  skills: string[];
-}
-
 export default function SkillsPage() {
-  const skillCategories: SkillCategory[] = [
-    {
-      category: "Main Languages",
-      skills: ["TypeScript", "Go"],
-    },
-    {
-      category: "Frontend",
-      skills: [
-        "React",
-        "Next.js",
-        "Tailwind CSS",
-        "shadcn/ui",
-        "Zustand",
-        "Framer Motion",
-        "Three.js",
-        "React Native",
-      ],
-    },
-    {
-      category: "Backend",
-      skills: ["Node.js", "Express", "Hono", "tRPC", "Gin", "zod", "OpenAPI"],
-    },
-    {
-      category: "Database / Auth",
-      skills: ["PostgreSQL", "Supabase", "Supabase Auth", "NextAuth"],
-    },
-    {
-      category: "Infra / Deployment",
-      skills: [
-        "Docker",
-        "Kubernetes",
-        "Vercel",
-        "Render",
-        "Cloudflare Workers",
-        "AWS",
-      ],
-    },
-    {
-      category: "Tooling",
-      skills: ["Git", "GitHub", "GitHub Actions", "pnpm", "ESLint", "Biome"],
-    },
-  ];
-
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
       <h1 className="mb-12 text-center text-primary font-bold">Skills</h1>
