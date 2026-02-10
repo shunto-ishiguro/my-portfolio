@@ -5,10 +5,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev      # Start development server (localhost:3000)
-npm run build    # Production build
-npm run start    # Start production server
-npm run lint     # Run ESLint
+pnpm run dev      # Start development server (localhost:3000)
+pnpm run build    # Production build
+pnpm run start    # Start production server
+pnpm run lint     # Run Biome check
+pnpm run lint:fix # Run Biome check with auto-fix
+pnpm run format   # Run Biome formatter
 ```
 
 ## Architecture

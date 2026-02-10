@@ -1,6 +1,6 @@
-import { worksData } from '@/lib/works'
-import { WorksGrid } from '@/components/WorksGrid'
+import { WorksGrid } from "@/components/WorksGrid";
+import { worksData } from "@/lib/works";
 
 export default function WorksPage() {
-    return <WorksGrid works={worksData} />
+  return <WorksGrid works={worksData} />;
 }
