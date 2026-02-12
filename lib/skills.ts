@@ -28,7 +28,15 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     category: "Database / Auth",
-    skills: ["PostgreSQL", "Supabase", "Supabase Auth", "NextAuth"],
+    skills: [
+      "PostgreSQL",
+      "Prisma",
+      "Drizzle",
+      "Supabase",
+      "NextAuth",
+      "Better Auth",
+      "Supabase Auth",
+    ],
   },
   {
     category: "Infra / Deployment",

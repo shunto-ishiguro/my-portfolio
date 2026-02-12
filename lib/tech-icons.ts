@@ -18,10 +18,13 @@ export const techIconMap: Record<string, string> = {
   Gin: "https://cdn.simpleicons.org/gin",
   zod: "https://cdn.simpleicons.org/zod",
   OpenAPI: "https://cdn.simpleicons.org/openapiinitiative",
+  Prisma: "https://cdn.simpleicons.org/prisma",
+  Drizzle: "https://cdn.simpleicons.org/drizzle",
   PostgreSQL: "https://cdn.simpleicons.org/postgresql",
   Supabase: "https://cdn.simpleicons.org/supabase",
   NextAuth: "https://next-auth.js.org/img/logo/logo-sm.png",
   "Supabase Auth": "https://cdn.simpleicons.org/supabase",
+  "Better Auth": "https://www.better-auth.com/logo.png",
   Vercel: "https://cdn.simpleicons.org/vercel",
   Render: "https://cdn.simpleicons.org/render",
   "Cloudflare Workers": "https://cdn.simpleicons.org/cloudflareworkers",
@@ -44,6 +47,8 @@ export const techIconMap: Record<string, string> = {
   CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   Zustand:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/zustand/zustand-original.svg",
+  "Slack API":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
 };
 
 export function getTechIconUrl(tech: string): string | null {
