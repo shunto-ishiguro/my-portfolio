@@ -10,6 +10,7 @@ export const techIconMap: Record<string, string> = {
   "Framer Motion": "https://cdn.simpleicons.org/framer",
   "Three.js": "https://cdn.simpleicons.org/threedotjs",
   "React Native": "https://cdn.simpleicons.org/react",
+  Expo: "https://cdn.simpleicons.org/expo",
   "Node.js": "https://cdn.simpleicons.org/nodedotjs",
   Hono: "https://cdn.simpleicons.org/hono",
   tRPC: "https://cdn.simpleicons.org/trpc",
@@ -30,6 +31,8 @@ export const techIconMap: Record<string, string> = {
   pnpm: "https://cdn.simpleicons.org/pnpm",
   ESLint: "https://cdn.simpleicons.org/eslint",
   Biome: "https://cdn.simpleicons.org/biome",
+  Playwright:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg",
   Docker: "https://cdn.simpleicons.org/docker",
   Kubernetes: "https://cdn.simpleicons.org/kubernetes",
   AWS: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazonwebservices.svg",

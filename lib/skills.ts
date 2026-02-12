@@ -19,6 +19,7 @@ export const skillCategories: SkillCategory[] = [
       "Framer Motion",
       "Three.js",
       "React Native",
+      "Expo",
     ],
   },
   {
@@ -42,6 +43,14 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     category: "Tooling",
-    skills: ["Git", "GitHub", "GitHub Actions", "pnpm", "ESLint", "Biome"],
+    skills: [
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "pnpm",
+      "ESLint",
+      "Biome",
+      "Playwright",
+    ],
   },
 ];

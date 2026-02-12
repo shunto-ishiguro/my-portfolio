@@ -29,6 +29,7 @@ export const worksData: Work[] = [
       "Next.js",
       "Tailwind CSS",
       "shadcn/ui",
+      "Framer Motion",
       "Supabase",
       "Vercel",
     ],
@@ -38,7 +39,7 @@ export const worksData: Work[] = [
   },
   {
     id: "work-3",
-    title: "TAMABLE 長期インターン: 勤怠・日報システム",
+    title: "TAMABLE 長期インターン: 勤怠管理システム",
     description:
       "社内で専用の勤怠・日報システムの開発。フロントエンドの実装からバックエンドの実装まで担当。",
     technologies: [
@@ -56,9 +57,9 @@ export const worksData: Work[] = [
       "Supabase Auth",
       "GitHub Actions",
       "pnpm",
-      "ESlint",
+      "Biome",
       "Vercel",
-      "Cloudflare Workers",
+      "Playwright",
     ],
     roles: [
       "フロントエンド実装",
@@ -98,7 +99,7 @@ export const worksData: Work[] = [
   },
   {
     id: "work-5",
-    title: "個人プロジェクト: ポートフォリオサイト",
+    title: "ポートフォリオサイト",
     description:
       "このポートフォリオサイトについて。レスポンシブデザインとアクセシビリティを重視。",
     technologies: [
@@ -106,9 +107,9 @@ export const worksData: Work[] = [
       "React",
       "Next.js",
       "Tailwind CSS",
-      "shadcn/ui",
       "GitHub Actions",
-      "ESLint",
+      "pnpm",
+      "Biome",
       "Vercel",
     ],
     githubUrl: "https://github.com/shunto-ishiguro/my-portfolio",
