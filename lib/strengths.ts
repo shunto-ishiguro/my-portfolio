@@ -2,7 +2,6 @@ import {
   Blocks,
   Gauge,
   type LucideIcon,
-  Network,
   Palette,
   Shield,
   Zap,
@@ -40,9 +39,4 @@ export const strengths: Strength[] = [
     title: "セキュアな設計",
     description: "認証・認可を含むセキュリティを意識した開発",
   },
-  /*{
-    icon: Network,
-    title: "ネットワーク設計",
-    description: "TCP/IP・DNSなどのプロトコル知識に基づくインフラ構成の設計・最適化",
-  },*/
 ];
