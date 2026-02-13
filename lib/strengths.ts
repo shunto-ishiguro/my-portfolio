@@ -2,7 +2,6 @@ import {
   Blocks,
   Gauge,
   type LucideIcon,
-  Network,
   Palette,
   Shield,
   Zap,
@@ -27,8 +26,8 @@ export const strengths: Strength[] = [
   },
   {
     icon: Blocks,
-    title: "保守性・拡張性",
-    description: "コードの可読性と将来の変更を見据えた設計",
+    title: "アーキテクト",
+    description: "要件に応じた技術選定とシステム全体の設計判断",
   },
   {
     icon: Palette,
@@ -39,10 +38,5 @@ export const strengths: Strength[] = [
     icon: Shield,
     title: "セキュアな設計",
     description: "認証・認可を含むセキュリティを意識した開発",
-  },
-  {
-    icon: Network,
-    title: "ネットワークの知識",
-    description: "TCP/IPやDNSなどネットワーク基盤への理解",
   },
 ];

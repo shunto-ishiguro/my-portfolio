@@ -13,7 +13,7 @@ export default function SkillsPage() {
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
       <h1 className="mb-12 text-center text-primary font-bold">Skills</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="space-y-6">
         {skillCategories.map((category) => (
           <div
             key={category.category}
@@ -23,15 +23,15 @@ export default function SkillsPage() {
               {category.category}
             </h2>
 
-            <div className="space-y-3">
+            <div className="flex flex-wrap gap-3">
               {category.skills.map((skill) => {
                 const iconUrl = getTechIconUrl(skill);
                 return (
                   <div
                     key={skill}
-                    className="flex items-center gap-3 p-2 rounded-md hover:bg-primary/10 transition-colors"
+                    className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-primary/10 transition-colors"
                   >
-                    <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
                       {iconUrl && (
                         <Image
                           src={iconUrl}
