@@ -14,9 +14,9 @@ export const timeline: TimelineItem[] = [
   },
   {
     date: "2024年4月 - 2025年3月",
-    title: "高度ICT演習はこんだてプロジェクト",
+    title: "はこんだて（モバイルアプリケーション開発・運用）",
     description:
-      "実際にリリースしているアプリケーション「はこんだて」のメンバーとしてプロジェクトに携わった",
+      "モバイルアプリケーション開発・運用を行うチーム「はこんだて」のメンバーとして1年間開発に携わった",
     type: "project",
   },
   {
@@ -46,7 +46,7 @@ export const timeline: TimelineItem[] = [
   {
     date: "2025年12月",
     title: "P2HACKS2025",
-    description: "バックエンド・インフラを担当",
+    description: "バックエンド開発を担当",
     type: "hackathon",
   },
 ];
